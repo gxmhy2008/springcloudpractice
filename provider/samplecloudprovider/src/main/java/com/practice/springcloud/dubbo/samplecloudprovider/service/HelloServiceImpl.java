@@ -4,7 +4,7 @@ import com.practice.springcloud.api.IHelloService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;
 
-@Service
+@Service(cluster = "failfast", loadbalance = "roundrobin")
 public class HelloServiceImpl implements IHelloService {
 
     @Value("${spring.application.name}")

@@ -79,6 +79,7 @@
                         </goals>
                     </execution>
                 </executions>
+                <!--解决Jar中清单文件(MANIFEST.MF)没有设置启动类(Start-Class:)的问题-->
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
                     <mainClass>com.practice.springcloud.dubbo.samplecloudprovider.SamplecloudproviderApplication</mainClass>
